@@ -10,7 +10,11 @@
     <repositories>
         <repository>
             <id>central</id>
-            <url>http://central.maven.org/maven2/</url>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>clojars</id>
+            <url>https://repo.clojars.org/</url>
         </repository>
     </repositories>
 
@@ -37,7 +41,11 @@
             <artifactId>logback-classic</artifactId>
             <version>1.4.5</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
 
     </dependencies>
 
