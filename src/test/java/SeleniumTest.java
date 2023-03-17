@@ -1,14 +1,26 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SeleniumTest {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+
+    private WebDriver driver;
+
+    @BeforeTest
+    public void setUp() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
     }
 
     @Test
-    public void SampleTest(){
-        System.out.println("This is test");
+    public void testMethod() {
+        driver.get("https://www.google.com/");
     }
+
+
 }
+
